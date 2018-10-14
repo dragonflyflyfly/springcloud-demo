@@ -1,0 +1,27 @@
+eureka:
+  client:
+    serviceUrl:
+        defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+server:
+  context-path: /
+  error:
+    whitelabel:
+      enabled: false
+  port: 8003
+
+#应用名称
+spring:
+  application:
+    name: weather-report-server
+  thymeleaf:
+    cache: false #热部署静态文件
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+
+# thymeleaf
+#spring.thymeleaf.prefix=classpath:/templates/
+#spring.thymeleaf.suffix=.html

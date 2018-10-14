@@ -1,0 +1,28 @@
+server:
+  port: 6677
+spring:
+  application:
+    name: weather-api-gateway
+
+eureka:
+  client:
+    registerWithEureka: true #网关服务也要注册到Eureka
+    fetchRegistry: true #从Eureka获取注册信息
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
+  instance:
+    prefer-ip-address: true #将自己的ip注册到Eureka
+
+#配置路由规则
+zuul:
+  routes:
+    city: #城市微服务(名字任意)
+      path: /city/**
+      serviceId: weather-city-server #访问/city路径，转发到此微服务
+    data: #天气数据微服务(名字任意)
+      path: /data/**
+      serviceId: weather-data-server #访问/data路径，转发到此微服务
+      #url: http://127.0.0.1:8181
+    report: #天气预报微服务(名字任意)
+      path: /report/**
+      serviceId: weather-report-server #访问/report路径，转发到此微服务

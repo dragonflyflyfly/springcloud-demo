@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false #自身就是eureka，不需要将自己注册到Eureka。默认true,会注册自身。
+    fetchRegistry: false #单点，不需要从Eureka获取注册信息。默认true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #与eureka交互的地址。查询和注册服务都需要该地址。
+  instance:
+    hostname: discovery
+

@@ -1,0 +1,24 @@
+server:
+  port: 8002
+  context-path: /
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  application:
+    name: weather-collection-server
+  cloud:
+    client:
+      ipAddress: 127.0.0.1 #ip地址
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+    instance:
+      preferIpAddress: true #将自己的ip也注册到Eureka。不配置或设置为false则将操作系统的hostname注册到eureka
+      instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+
+
