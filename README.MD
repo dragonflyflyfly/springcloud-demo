@@ -16,7 +16,11 @@ springcloud-demo:聚合工程
     weather-report-server  天气预报服务  
     weather-api-gateway 服务网关  
     config-server 统一配置中心  
-二、运行项目    
+二、运行项目   
+说明：  
+如果直接访问微服务，则将weather-report-server项目中的report.js和report.html两个文件中的url修改为直接访问的url(文件内有说明)。  
+如果通过服务网关访问，则改为网关访问的url即可(文件内有说明)。  
+ 
 0.先在hosts中配置:127.0.0.1 discovery   
 1.启动redis   
 2.依次启动各微服务  
@@ -55,6 +59,4 @@ springcloud-demo:聚合工程
 天气预报服务  
     http://discovery:6677/report/report/cityId/101280101    
        
-三、遗留问题   
-Eureka不注销关闭的应用实例  
-ObjectMapper实例  
+  
