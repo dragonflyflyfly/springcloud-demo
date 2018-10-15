@@ -28,7 +28,7 @@ public class CityController {
      */
     @GetMapping("/city/cityId/{cityId}")
     public City getCityById(@PathVariable("cityId") Integer cityId) throws Exception {
-        System.out.println(cityDataService.getCityById(cityId));
+        System.out.println("访问的6002微服务");
         return cityDataService.getCityById(cityId);
     }
 

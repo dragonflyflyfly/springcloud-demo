@@ -69,6 +69,9 @@
 		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 		crossorigin="anonymous"></script>
 	<!-- Optional JavaScript -->
-	<script type="text/javascript" th:src="@{/js/weather/report.js}"></script>
+    <!--直接访问天气预报微服务-->
+	<!--<script type="text/javascript" th:src="@{/js/weather/report.js}"></script>-->
+	<!--使用网关访问天气预报微服务-->
+	<script type="text/javascript" th:src="@{/report/js/weather/report.js}"></script>
 </body>
 </html>

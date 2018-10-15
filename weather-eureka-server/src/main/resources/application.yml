@@ -8,5 +8,5 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #与eureka交互的地址。查询和注册服务都需要该地址。
   instance:
-    hostname: discovery
+    hostname: discovery #该服务注册中心的hostname
 
