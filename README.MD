@@ -1,5 +1,8 @@
 一、项目说明  
-学习SpringCloud的基本使用，包括以下内容：       
+该项目来源于慕课网《从天气项目看 Spring Cloud 微服务治理》，网址为https://coding.imooc.com/class/177.html。  
+代码是我自己实现的，与原代码不完全一样。  
+
+该项目主要用于学习SpringCloud的基本使用，包括以下内容：       
 ●Eureka服务注册和服务发现  
 ●RestTemplate调用微服务，并使用Ribbon客户端负载均衡    
 ●Feign调用微服务(默认Ribbon负载均衡)  
@@ -58,5 +61,3 @@ springcloud-demo:聚合工程
     http://discovery:6677/data/weather/cityName/广州  
 天气预报服务  
     http://discovery:6677/report/report/cityId/101280101    
-       
-  
