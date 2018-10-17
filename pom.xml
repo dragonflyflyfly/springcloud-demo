@@ -7,7 +7,6 @@
     <artifactId>springcloud-demo</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
     <description>springcloud聚合工程</description>
 
     <parent>

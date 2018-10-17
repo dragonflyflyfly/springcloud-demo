@@ -19,7 +19,8 @@ springcloud-demo:聚合工程
     weather-report-server  天气预报服务  
     weather-api-gateway 服务网关  
     config-server 统一配置中心  
-二、运行项目   
+    
+三、运行项目   
 说明：  
 如果直接访问微服务，则将weather-report-server项目中的report.js和report.html两个文件中的url修改为直接访问的url(文件内有说明)。  
 如果通过服务网关访问，则改为网关访问的url即可(文件内有说明)。  
@@ -27,12 +28,12 @@ springcloud-demo:聚合工程
 0.先在hosts中配置:127.0.0.1 discovery   
 1.启动redis   
 2.依次启动各微服务  
-    启动注册中心：weather-eureka-server  
+    启动注册中心：weather-eureka-server (8761端口)  
     启动城市服务：weather-city-server-6001    
     启动城市服务：weather-city-server-6002  
-    启动天气采集服务：weather-collection-server(8002端口)  
-    启动天气数据服务：weather-data-server  
-    启动天气预报服务：weather-report-server    
+    启动天气采集服务：weather-collection-server(8002端口)    
+    启动天气数据服务：weather-data-server (8001端口)   
+    启动天气预报服务：weather-report-server (8003端口)       
 3.服务自测  
 注册中心  
     http://discovery:8761  
@@ -60,4 +61,8 @@ springcloud-demo:聚合工程
     http://discovery:6677/data/weather/cityId/101280101    
     http://discovery:6677/data/weather/cityName/广州  
 天气预报服务  
-    http://discovery:6677/report/report/cityId/101280101    
+    http://discovery:6677/report/report/cityId/101280101   
+5.测试SpringCloud Config  
+启动config-server配置服务    
+http://discovery:8080/weather/dev  
+http://discovery:8080/weather-dev.properties  

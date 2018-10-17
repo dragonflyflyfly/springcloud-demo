@@ -1,9 +1,15 @@
+server:
+  port: 8080
+  context-path: /
+  error:
+    whitelabel:
+      enabled: false
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-server:
-  port: 8080
+
 spring:
   application:
     name: config-server
@@ -13,5 +19,5 @@ spring:
         git:
           uri: https://github.com/dragonflyflyfly/springcloud-demo/ #配置git仓库的地址
           searchPaths: config-repo #仓库路径下的相对搜索位置，可以配置多个
-          username: '' #访问git仓库的用户名
-          password: '' #访问git仓库的密码
+          #username: '' #访问git仓库的用户名
+          #password: '' #访问git仓库的密码

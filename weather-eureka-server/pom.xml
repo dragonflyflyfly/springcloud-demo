@@ -5,6 +5,7 @@
 
     <artifactId>weather-eureka-server</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
     <description>服务发现和服务注册中心</description>
 
     <parent>

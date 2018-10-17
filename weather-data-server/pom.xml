@@ -6,7 +6,6 @@
 	<artifactId>weather-data-server</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-
 	<description>天气数据微服务</description>
 
 	<parent>

@@ -3,12 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lp</groupId>
     <artifactId>weather-collection-server</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-
-    <name>weather-collection-server</name>
     <description>天气数据采集服务</description>
 
     <parent>

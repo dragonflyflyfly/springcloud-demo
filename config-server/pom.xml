@@ -6,8 +6,7 @@
 	<artifactId>config-server</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-
-	<description>配置服务</description>
+	<description>统一配置服务</description>
 
 	<parent>
 		<groupId>com.lp</groupId>
@@ -22,13 +21,13 @@
 	</properties>
 
 	<dependencies>
-        <!--Spring Cloud Config依赖-->
+        <!--Spring Cloud Config服务端-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
-		<!-- 添加Eureka的依赖	-->
+		<!-- Eureka	-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>

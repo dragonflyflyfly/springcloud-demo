@@ -6,7 +6,6 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>weather-city-server-6002</artifactId>
     <version>1.0.0</version>
-
     <description>同weather-city-server服务</description>
 
     <parent>
