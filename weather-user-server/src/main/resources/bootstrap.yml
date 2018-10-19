@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: weather-user-server
+  cloud:
+    config:
+      profile: dev #指定profile，对应config-server所获取的配置文件中的{profile}
+      uri: http://config-server:8888/ #指定配置服务器的url
+      label: master #指定git仓库的分支，对应config-server所获取的配置文件的{label}
