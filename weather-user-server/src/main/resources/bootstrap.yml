@@ -1,6 +1,10 @@
+#客户端默认优先加载bootstrap.properties，即便自己写了其他配置文件，也会加载默认的bootstrap配置文件
+server:
+  port: 9000
+
 spring:
   application:
-    name: weather-user-server
+    name: weather #【对应config server所获取的配置文件的{application}】
   cloud:
     config:
       profile: dev #指定profile，对应config-server所获取的配置文件中的{profile}
