@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer//声明注册中心，使用Eureka做服务发现
 @SpringBootApplication
-public class EurekaServiceApplication {
+public class WeatherEurekaServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServiceApplication.class, args);
+        SpringApplication.run(WeatherEurekaServiceApplication.class, args);
     }
 
 }

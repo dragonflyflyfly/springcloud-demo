@@ -18,7 +18,7 @@ springcloud-demo:聚合工程
     weather-collection-server  天气收集服务(从第三方获取天气数据信息，缓存到redis)    
     weather-report-server  天气预报服务  
     weather-api-gateway 服务网关  
-    config-server 统一配置中心  
+    weather-config-server 统一配置中心  
     
 三、运行项目   
 说明：  
@@ -63,6 +63,4 @@ springcloud-demo:聚合工程
 天气预报服务  
     http://discovery:6677/report/report/cityId/101280101   
 5.测试SpringCloud Config  
-启动config-server配置服务    
-http://discovery:8080/weather/dev  
-http://discovery:8080/weather-dev.properties  
+启动config-server统一配置服务  

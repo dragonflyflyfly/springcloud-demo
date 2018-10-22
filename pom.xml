@@ -16,20 +16,33 @@
     </parent>
 
     <modules>
+        <!--SpringCloud基础入门-->
+        <module>ms-eureka-server</module>
+        <module>ms-config-server</module>
+        <module>ms-config-client</module>
+        <module>ms-api-gateway</module>
+        <module>ms-provider-6001</module>
+        <module>ms-provider-6002</module>
+        <module>ms-consumer-feign</module>
+        <module>ms-consumer-rest</module>
+        <!--weather项目-->
         <module>weather-eureka-server</module>
+        <module>weather-config-server</module>
+        <module>weather-api-gateway</module>
         <module>weather-city-server-6001</module>
         <module>weather-city-server-6002</module>
         <module>weather-collection-server</module>
         <module>weather-data-server</module>
         <module>weather-report-server</module>
-        <module>weather-api-gateway</module>
-        <module>config-server</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!-- jdbc驱动版本设置 -->
+        <mysql.driver.version>5.1.38</mysql.driver.version>
+        <mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -58,6 +71,20 @@
                 <version>1.0.4</version>
             </dependency>
 
+            <!--Mybatis-spring-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!-- mysql驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.driver.version}</version>
+                <scope>runtime</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

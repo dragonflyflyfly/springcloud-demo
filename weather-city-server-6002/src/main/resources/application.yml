@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: weather-city-server
+    name: @pom.artifactId@
   cloud:
     client:
       ipAddress: 127.0.0.1 #ip地址

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: weather-api-gateway
+    name: @pom.artifactId@
 
 eureka:
   client:

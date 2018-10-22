@@ -9,10 +9,10 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @EnableZuulProxy// 同时该代理还整合了Hystrix来实现容错，所有经过zuul的请求都会在Hystrix命令中执行。
 @EnableDiscoveryClient //网关服务也需要注册到注册中心
 @SpringBootApplication
-public class ApiGatewayApplication {
+public class WeatherApiGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiGatewayApplication.class, args);
+        SpringApplication.run(WeatherApiGatewayApplication.class, args);
     }
 
 }
