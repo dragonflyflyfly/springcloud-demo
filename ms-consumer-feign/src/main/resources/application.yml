@@ -1,0 +1,13 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: @pom.artifactId@
+
+eureka:
+  client:
+    serviceUrl:
+        defaultZone: http://discovery:8761/eureka/
+    instance:
+      preferIpAddress: true

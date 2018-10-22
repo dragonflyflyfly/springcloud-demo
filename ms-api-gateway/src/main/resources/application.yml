@@ -1,0 +1,28 @@
+server:
+  port: 6677
+
+spring:
+  application:
+    name: @pom.artifactId@
+
+eureka:
+  client:
+    registerWithEureka: true #网关服务也要注册到Eureka
+    fetchRegistry: true #从Eureka获取注册信息
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
+  instance:
+    prefer-ip-address: true #将自己的ip注册到Eureka
+
+#配置路由规则
+zuul:
+  routes:
+    provider: #微服务提供者(名字任意)
+      path: /provider/**
+      serviceId: ms-provider #访问/city路径，转发到此微服务
+    consumer1: #微服务消费者-feign(名字任意)
+      path: /feign/**
+      serviceId: ms-consumer-feign #访问/feign路径，转发到此微服务
+    consumer2: #微服务消费者-rest(名字任意)
+      path: /rest/**
+      serviceId: ms-consumer-rest #访问/rest路径，转发到此微服务
