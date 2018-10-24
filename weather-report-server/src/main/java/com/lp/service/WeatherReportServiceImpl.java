@@ -17,7 +17,7 @@ public class WeatherReportServiceImpl implements WeatherReportService {
     @HystrixCommand(fallbackMethod = "getDataByCityIdFallback")
     @Override
     public Weather getDataByCityId(String cityId) {
-        //调用微服务
+        //调用天气数据微服务
         WeatherResponse weatherResponse = weatherDataFeignClient.getDataByCityId(cityId);
         Weather weather = weatherResponse.getData();
         return weather;

@@ -1,12 +1,21 @@
 #客户端默认优先加载bootstrap.properties，即便自己写了其他配置文件，也会加载默认的bootstrap配置文件
 server:
-  port: 9000
+  port: 8081
 
 spring:
-  application:
-    name: weather #【对应config server所获取的配置文件的{application}】
+  #application:
+    #name: weather #【对应config server所获取的配置文件的{application}】
   cloud:
     config:
+      name: weather
       profile: dev #指定profile，对应config-server所获取的配置文件中的{profile}
-      uri: http://config-server:8888/ #指定配置服务器的url
+      #uri: http://config-server:8888/ #指定配置服务器的url。如果使用了eureka，则让其自动发现。
       label: master #指定git仓库的分支，对应config-server所获取的配置文件的{label}
+      discovery:
+        enabled: true #启动发现服务功能
+        service-id: weather-config-server #发现服务
+#  rabbitmq: #RabbitMQ相关的配置
+#    host: 127.0.0.1
+#    port: 5672
+#    username: guest
+#    password: guest

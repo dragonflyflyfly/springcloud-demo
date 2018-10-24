@@ -22,10 +22,10 @@
 
 	<dependencies>
 		<!-- Eureka客户端 -->
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>-->
+		</dependency>
 
 		<!-- Spring Cloud Config客户端 -->
 		<dependency>

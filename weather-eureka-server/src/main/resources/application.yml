@@ -2,6 +2,8 @@ server:
   port: 8761
 
 eureka:
+  server:
+    eviction-interval-timer-in-ms: 30000 #30s。仅开发测试阶段用，生产环境使用默认值
   client:
     registerWithEureka: false #自身就是eureka，不需要将自己注册到Eureka。默认true,会注册自身。
     fetchRegistry: false #单点，不需要从Eureka获取注册信息。默认true

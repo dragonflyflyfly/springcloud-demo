@@ -20,7 +20,7 @@ public class Weather implements Serializable {
 
     //城市
     private String city;
-
+    //空气质量指数
     private String aqi;
     //感冒
     private String ganmao;

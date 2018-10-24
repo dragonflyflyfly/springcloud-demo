@@ -1,0 +1,18 @@
+#由于bootstrap.yml中已经配置了一个spring.application.name,则这里不能再配置。
+#使用eureka.instance.appname代替。spring.application.name的优先级比eureka.instance.appname高
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: weather-user-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+    #ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}

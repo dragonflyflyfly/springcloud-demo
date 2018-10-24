@@ -27,3 +27,6 @@ zuul:
     report: #天气预报微服务(名字任意)
       path: /report/**
       serviceId: weather-report-server #访问/report路径，转发到此微服务
+    user: #用户微服务
+      path: /user/**
+      serviceId: weather-user-server #访问/user路径，转发到此微服务
