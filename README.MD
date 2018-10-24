@@ -33,6 +33,7 @@ springcloud-demo: 聚合工程
 1.先在hosts中配置:  
     127.0.0.1 discovery   
     127.0.0.1 config-server    
+    127.0.0.1 gateway
 2.启动redis   
 3.依次启动各微服务,并进行服务自测   
 启动注册中心：weather-eureka-server(8761端口)  
@@ -63,17 +64,17 @@ springcloud-demo: 聚合工程
 需先将report.js和report.html中的url改为使用网关场景的url。          
 然后启动网关微服务：weather-api-gateway(6677端口)  
 用户服务  
-    http://discovery:6677/user/user/1  
+    http://gateway:6677/user/user/1  
 城市服务  
-    http://discovery:6677/city/cities  
-    http://discovery:6677/city/city/cityId/101280101  
-    http://discovery:6677/city/city/cityName/广州    
+    http://gateway:6677/city/cities  
+    http://gateway:6677/city/city/cityId/101280101  
+    http://gateway:6677/city/city/cityName/广州    
 天气数据服务  
-    http://discovery:6677/data/weather/cityId/101280101    
-    http://discovery:6677/data/weather/cityName/广州  
+    http://gateway:6677/data/weather/cityId/101280101    
+    http://gateway:6677/data/weather/cityName/广州  
 天气预报服务  
-    http://discovery:6677/report/report/cityId/101280101  
-    http://discovery:6677/report/report/user/1  
+    http://gateway:6677/report/report/cityId/101280101  
+    http://gateway:6677/report/report/user/1  
 
 
   
