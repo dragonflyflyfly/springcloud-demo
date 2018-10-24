@@ -39,26 +39,26 @@ springcloud-demo: 聚合工程
 启动注册中心：weather-eureka-server(8761端口)  
     http://discovery:8761  
 启动配置服务：weather-config-server(8888端口)  
-    http://discovery:8888/weather/dev  
-    http://discovery:8888/weather-dev.yml  
+    http://config-server:8888/weather/dev  
+    http://config-server:8888/weather-dev.yml  
 启动用户服务：weather-user-server(8081端口)  
-    http://discovery:8081/user/1     
+    http://localhost:8081/user/1     
 启动城市服务：weather-city-server-6001   
-    http://discovery:6001/cities  
-    http://discovery:6001/city/cityId/101280101   
-    http://discovery:6001/city/cityName/广州  
+    http://localhost:6001/cities  
+    http://localhost:6001/city/cityId/101280101   
+    http://localhost:6001/city/cityName/广州  
 启动城市服务：weather-city-server-6002  
-    http://discovery:6002/cities  
-    http://discovery:6002/city/cityId/101280101   
-    http://discovery:6002/city/cityName/广州  
+    http://localhost:6002/cities  
+    http://localhost:6002/city/cityId/101280101   
+    http://localhost:6002/city/cityName/广州  
 启动天气采集服务：weather-collection-server(8002端口)   
     在redis客户端中查看数据是否进行了保存  
 启动天气数据服务：weather-data-server (8001端口)   
-    http://discovery:8001/weather/cityId/101280101  
-    http://discovery:8001/weather/cityName/广州  
+    http://localhost:8001/weather/cityId/101280101  
+    http://localhost:8001/weather/cityName/广州  
 启动天气预报服务：weather-report-server (8003端口)     
-    http://discovery:8003/report/cityId/101280101  
-    http://discovery:8003/report/user/1  
+    http://localhost:8003/report/cityId/101280101  
+    http://localhost:8003/report/user/1  
 
 3.测试使用网关访问各微服务  
 需先将report.js和report.html中的url改为使用网关场景的url。          
