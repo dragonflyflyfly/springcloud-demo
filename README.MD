@@ -2,14 +2,13 @@
 该项目来源于慕课网《从天气项目看 Spring Cloud 微服务治理》，网址为https://coding.imooc.com/class/177.html。  
 代码是我自己实现的，与原代码不完全一样。  
 
-该项目主要用于学习SpringCloud的基本使用，包括以下内容： 
+该项目主要用于学习SpringCloud的基本使用，包括以下内容：   
 ●Eureka服务注册和服务发现  
 ●RestTemplate调用微服务，并使用Ribbon客户端负载均衡    
 ●Feign调用微服务(默认Ribbon负载均衡)  
 ●Hystrix熔断机制  
 ●SpringCloud Config统一配置管理   
 ●SpringCloud Bus自动刷新配置  
-●
 
 天气数据来源于第三方的天气服务，访问地址如下：  
 http://wthrcdn.etouch.cn/weather_mini?citykey=101280102  
@@ -33,7 +32,7 @@ springcloud-demo: 聚合工程
 1.先在hosts中配置:  
     127.0.0.1 discovery   
     127.0.0.1 config-server    
-    127.0.0.1 gateway
+    127.0.0.1 gateway  
 2.启动redis   
 3.依次启动各微服务,并进行服务自测   
 启动注册中心：weather-eureka-server(8761端口)  
